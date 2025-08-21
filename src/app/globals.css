@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", "sans-serif";
+  background-color: #f6f6f6;
+}
+
+@layer base {
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-height {
+    max-height: 330px !important;
+  }
+  .custom-popup-height {
+    max-height: 325px !important;
+  }
+}
+
+@media (max-width: 525px) {
+  .custom-new-width {
+    width: 100% !important;
+  }
+  .custom-height {
+    max-height: 515px !important ;
+  }
+  .custom-width {
+    width: 100% !important;
+  }
+  .custom-popup-height {
+    max-height: 325px !important;
+  }
+  .promos-width {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .custom-new-width {
+    width: 100% !important;
+  }
+  .custom-height {
+    max-height: 515px !important ;
+  }
+  .promos-width {
+    width: 100% !important;
+  }
+  .promos-height {
+    max-height: 524px !important;
+  }
+  .custom-filter-width {
+    width: 100% !important;
+  }
+  .custom-profile {
+    width: 250px !important;
+    max-height: 250px !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .custom-popup-height {
+    max-height: 275px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .custom-popup-height {
+    max-height: 250px !important;
+  }
+}
+
+.nextjs-toast-errors-parent,
+.nextjs-error-with-static {
+  display: none !important;
+}
+
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-dropdown {
+  z-index: 9999999999999999999999999999;
+}
+
+.loading-spinner {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading-spinner::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: #3498db; /* Blue color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px; /* Space between spinner and text */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
