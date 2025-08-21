@@ -124,7 +124,7 @@ export default function SearchHeader() {
   };
 
   const bussinessOptions = (users: any) => {
-    const industry = users.map((user: any) => user.lifestyle.industry);
+    const industry = users.map((user: any) => user?.lifestyle?.industry);
     const industryOptionss: any = industryOptions.filter((curElem) =>
       industry.includes(curElem.value)
     );
