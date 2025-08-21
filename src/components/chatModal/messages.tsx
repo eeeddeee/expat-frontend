@@ -571,8 +571,9 @@ export default function MessagesModal({
                             {" "}
                             <Link
                               href={`/profile-details/${participantsArray?.[0]?.id}`}
-                              className="flex items-center hover:text-blue-800 transition-colors"
+                              className="flex items-center hover:text-blue-800 hover:underline transition-colors"
                               target="_blank"
+                              title="Click to view profile"
                             >
                               {participantsArray?.[0]?.name}
                             </Link>

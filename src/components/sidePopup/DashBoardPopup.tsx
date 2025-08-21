@@ -5,19 +5,19 @@ import { Notebook, X } from "lucide-react";
 import Cookies from "js-cookie";
 
 function DashBoardPopup() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
-  useEffect(() => {
-    const popupClosed = Cookies.get("popupClosed");
-    if (popupClosed) {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const popupClosed = Cookies.get("popupClosed");
+  //   if (popupClosed) {
+  //     setIsOpen(true);
+  //   } else {
+  //     setIsOpen(false);
+  //   }
+  // }, []);
 
   const closePopup = () => {
-    Cookies.set("popupClosed", "true", { expires: 10 / 24 });
+    // Cookies.set("popupClosed", "true", { expires: 10 / 24 });
     setIsOpen(false);
   };
 
